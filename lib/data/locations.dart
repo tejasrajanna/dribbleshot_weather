@@ -4,6 +4,7 @@ class Location{
   final int temperature;
   final String weather;
   final String imageUrl;
+  final String imgicon;
 
   Location({
     required this.text,
@@ -11,6 +12,7 @@ class Location{
     required this.temperature,
     required this.weather,
     required this.imageUrl,
+    required this.imgicon,
 });
 }
 
@@ -21,6 +23,7 @@ final locations = [
     temperature: 15,
     weather: 'Cloudy',
     imageUrl: 'https://i.ibb.co/df35Y8Q/2.png',
+    imgicon: 'wi-cloudy',
   ),
   Location(
     text: 'San Francisco',
@@ -28,5 +31,6 @@ final locations = [
     temperature: 6,
     weather: 'Raining',
     imageUrl: 'https://i.ibb.co/7WyTr6q/3.png',
+    imgicon: 'wi-rain',
   ),
 ];

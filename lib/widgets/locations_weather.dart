@@ -1,5 +1,6 @@
 import 'package:dribble_1/data/locations.dart';
 import 'package:flutter/material.dart';
+import 'package:weather_icons/weather_icons.dart';
 
 class LocationsWeather extends StatelessWidget {
   const LocationsWeather({ Key? key }) : super(key: key);
@@ -13,6 +14,7 @@ class LocationsWeather extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                           for (var location in locations)
+                        
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: Stack(
@@ -50,7 +52,25 @@ class LocationsWeather extends StatelessWidget {
                                       ),
                                       ),
                                       SizedBox(height:50),
-                                      Text(location.weather),
+                                      RichText(
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: location.weather,
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w500)
+                                            ),
+                                            WidgetSpan(
+                                              child: BoxedIcon(
+                                                WeatherIcons.fromString(
+                                                  location.imgicon,
+                                                  fallback: WeatherIcons.na,
+                                                ),
+                                                color: Colors.white,)
+                                                 ),
+                                          ]
+                                        )),
                                     ],
                                   ),
                                 ],
