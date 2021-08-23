@@ -55,7 +55,7 @@ class Body extends StatelessWidget {
                   ),
                   SizedBox(height: 110),
                   Expanded(child: LocationsHeader()),
-                  SizedBox(height:30),
+                  SizedBox(height: 20),
                   LocationsWeather(),
                 ],
               ),
