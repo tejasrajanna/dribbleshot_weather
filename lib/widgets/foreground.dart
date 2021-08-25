@@ -30,7 +30,7 @@ class Foreground extends StatelessWidget {
             ),
           ],
     ),
-        body: Body(),
+        body: MainLayout(),
     );
   }
 }
